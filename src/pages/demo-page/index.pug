@@ -1,14 +1,85 @@
 doctype html
-html(lang="ru")
+html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title demo-page
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Marketplace
+    link(rel="stylesheet" href="css/index.css")
+  body
+    header
+      h1 Marketplace
+      input(type="text" placeholder="Search for a product, flower, etc.")
+      button Buds
+      button Edible
+      button Non Edible
+      button Concentrate
+    main
+      .filters
+        h2 Price Range
+        .slider
+          input(type="range" min="0" max="1000" value="234")
+          p 234$ - 1034.5 Results
 
-    link(rel="stylesheet", href="css/index.css")
+        h2 THC, %
+        .slider
+          input(type="range" min="0" max="100" value="65")
 
-  body.demo-page
-    h1.demo-page__title
+        h2 CBD, %
+        .slider
+          input(type="range" min="0" max="100" value="65")
+
+        h2 Nose
+        .nose
+          span(4) // Adjust number for representation
+          span(3)
+          span(5)
+
+        h2 Classification
+        label
+          input(type="checkbox")
+          | 100% Indica
+        label
+          input(type="checkbox")
+          | 100% Sativa
+        label
+          input(type="checkbox")
+          | 50% Indica
+        label
+          input(type="checkbox")
+          | 50% Sativa
+
+        h2 Production Method
+        label
+          input(type="checkbox")
+          | Indoor
+        label
+          input(type="checkbox")
+          | Outdoor
+        label
+          input(type="checkbox")
+          | Greenhouse
+
+      .sort
+        h2 Sort by:
+        ul
+          li Date (New first)
+          li Date (Old first)
+          li Price (High first)
+          li Price (Low first)
+          li Total THC (High first)
+          li Total CBD (High first)
+
+
+
+
+        
+        
+          
+            
+
+
+         
+      
+      
 
     script(src="js/index.js")

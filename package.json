@@ -85,7 +85,7 @@
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "rollup": "^4.17.2",
-    "sass": "^1.77.0",
+    "sass": "^1.79.4",
     "sass-loader": "^14.2.1",
     "storybook": "^8.0.10",
     "stylelint": "^16.5.0",
@@ -95,6 +95,8 @@
     "stylelint-scss": "^6.3.0"
   },
   "dependencies": {
-    "@csstools/normalize.css": "^12.1.1"
+    "@csstools/normalize.css": "^12.1.1",
+    "nouislider": "^15.8.1",
+    "pug": "^3.0.3"
   }
 }
