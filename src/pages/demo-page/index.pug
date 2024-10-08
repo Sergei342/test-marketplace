@@ -15,71 +15,53 @@ html(lang="en")
       button Concentrate
     main
       .filters
-        h2 Price Range
+        
+
+        h5 Price Range
         .slider
           input(type="range" min="0" max="1000" value="234")
           p 234$ - 1034.5 Results
 
-        h2 THC, %
+        h5 THC, %
         .slider
           input(type="range" min="0" max="100" value="65")
 
-        h2 CBD, %
+        h5 CBD, %
         .slider
           input(type="range" min="0" max="100" value="65")
 
-        h2 Nose
+        h5 Nose
         .nose
-          span(4) // Adjust number for representation
+          span(4)
           span(3)
           span(5)
 
-        h2 Classification
-        label
-          input(type="checkbox")
-          | 100% Indica
-        label
-          input(type="checkbox")
-          | 100% Sativa
-        label
-          input(type="checkbox")
-          | 50% Indica
-        label
-          input(type="checkbox")
-          | 50% Sativa
-
-        h2 Production Method
-        label
-          input(type="checkbox")
-          | Indoor
-        label
-          input(type="checkbox")
-          | Outdoor
-        label
-          input(type="checkbox")
-          | Greenhouse
-
-      .sort
-        h2 Sort by:
-        ul
-          li Date (New first)
-          li Date (Old first)
-          li Price (High first)
-          li Price (Low first)
-          li Total THC (High first)
-          li Total CBD (High first)
-
-
-
-
-        
-        
+    
+    .checkbox-group
+      p 1034,5 Results
+      label
+        input(type="checkbox")
+        | 100% Indica
+      label
+        input(type="checkbox")
+        | 100% Sativa
+      label
+        input(type="checkbox")
+        | 50% Indica
+      label
+        input(type="checkbox")
+        | 50% Sativa
           
-            
 
-
-         
-      
-      
-
-    script(src="js/index.js")
+        
+      .sort
+          h2 Sort by
+          ul
+            li Date (New first)
+            li Date (Old first)
+            li Price (High first)
+            li Price (Low first)
+            li Total THC (High first)
+            li Total CBD (High first)
+      .main-content
+        // Здесь можно добавить контент, например, продукты

@@ -3,24 +3,24 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212; // Темный фон
+  background-color: #121212;
   color: #ffffff;
   margin: 0;
 }
 
 header {
-  background-color: #1f1f1f; // Фон заголовка
+  background-color: #1f1f1f;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   h1 {
-    color: #6dcc4b; // Зеленый цвет для заголовка
+    color: #6dcc4b;
   }
 
   input[type="text"] {
-    background-color: #2a2a2a; // Цвет для текстового поля
+    background-color: #2a2a2a;
     border: none;
     padding: 10px;
     color: #ffffff;
@@ -29,7 +29,7 @@ header {
   }
 
   button {
-    background-color: #444; // Цвет кнопок
+    background-color: #444;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -39,85 +39,102 @@ header {
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #6dcc4b; // Цвет при наведении
+      background-color: #6dcc4b;
     }
   }
 }
 
 main {
-  display: flex;
+  display: flex; // Используем flexbox для основного контейнера
   padding: 20px;
 }
 
 .filters {
-  background-color: #2e2e2e; // Цвет бокового фильтра
+  display: flex;
+  height: 50px;
+  width: 850px;
+  
+  flex-direction: row;
+  background-color: #2e2e2e;
   padding: 20px;
-  width: 300px;
+  
   border-radius: 8px;
+  
+   // Вертикальное расположение элементов
+  gap: 5px; // Промежуток между элементами
 
-  h2 {
+  .sort {
+    h2 {
+      color: #6dcc4b; 
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  h5 {
     color: #6dcc4b; // Зеленый заголовок
+    margin: 0;
+    height: 10px;
   }
 
   .slider {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
+    
 
     input[type="range"] {
-      width: 100%;
+      
       margin: 0 10px;
     }
 
     p {
-      color: #ccc; // Цвет текста результатов
+      color: #ccc; 
       margin: 0;
     }
   }
 
-  label {
+  .checkbox-group {
+    display: flex; // Горизонтальное расположение чекбоксов
+    // Вертикальное расположение элементов
+    
+    gap: 10px;
+    padding-top: 10px;
+
+    label {
+      gap: 10px;
+      
+
+      input {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .nose {
     display: flex;
-    align-items: center;
-    margin-top: 10px;
+    margin: 10px 0;
 
-    input {
-      margin-right: 10px;
+    span {
+      background-color: yellow;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border-radius: 50%;
     }
   }
 }
 
-.nose {
-  display: flex;
-  margin: 10px 0;
-
-  span {
-    background-color: yellow;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    border-radius: 50%; // Округление для визуального представления
-  }
-}
-
-.sort {
-  background-color: #2e2e2e; // Цвет сортировки
+.main-content {
+  flex-grow: 1; // Дает возможность этому блоку занимать оставшееся пространство
   padding: 20px;
-  margin-left: 20px;
-  border-radius: 8px;
-
-  h2 {
-    color: #6dcc4b; // Зеленый заголовок
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    li {
-      margin-bottom: 10px;
-      color: #ffffff; // Цвет текста
-    }
-  }
+  // Здесь можно добавить стили для контента
 }
 
 
