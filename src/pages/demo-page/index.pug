@@ -4,64 +4,86 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Marketplace
-    link(rel="stylesheet" href="css/index.css")
-  body
-    header
-      h1 Marketplace
-      input(type="text" placeholder="Search for a product, flower, etc.")
-      button Buds
-      button Edible
-      button Non Edible
-      button Concentrate
-    main
-      .filters
-        
-
-        h5 Price Range
-        .slider
-          input(type="range" min="0" max="1000" value="234")
-          p 234$ - 1034.5 Results
-
-        h5 THC, %
-        .slider
-          input(type="range" min="0" max="100" value="65")
-
-        h5 CBD, %
-        .slider
-          input(type="range" min="0" max="100" value="65")
-
-        h5 Nose
-        .nose
-          span(4)
-          span(3)
-          span(5)
-
+    link(rel="stylesheet", href="css/index.css")
     
-    .checkbox-group
-      p 1034,5 Results
-      label
-        input(type="checkbox")
-        | 100% Indica
-      label
-        input(type="checkbox")
-        | 100% Sativa
-      label
-        input(type="checkbox")
-        | 50% Indica
-      label
-        input(type="checkbox")
-        | 50% Sativa
-          
+  body
+    .marketplace
+      header
+        h1 Marketplace
+        input.search-bar(type="text" placeholder="Search for a product, flower, etc.")
+        .product-types
+          button.active Buds
+          button.active Edible
+          button.active Non Edible
+          button.active Concentrate
+      .slider-filters
+          .slider-container
+           h4 Price Range
+           input(type="range" min="0" max="1000" value="234")
+          .slider-container
+            h4 THC %
+            input(type="range" min="0" max="1000" value="234")
+            #thc-slider
+          .slider-container
+            h4 CBD %
+            input(type="range" min="0" max="1000" value="234")
+            #cbd-slider
+          .slider-container
+            h4 Nose
+            input(type="range" min="0" max="1000" value="234")
+            #nose-slider
+      .slider-container
+        h4 Price Range
+        p 1034,5 Results
+    
+    
+
+  //- Pug template
+.wrapper
+  .selected-filters
+    h4 Выбранные фильтры:
+    ul.selected-list
+
+  .filters
+    h3 Classification
+    ul
+      li
+        input(type="checkbox" id="indica100" name="classification" value="100% Indica")
+        label(for="indica100") 100% Indica
+      li
+        input(type="checkbox" id="sativa100" name="classification" value="100% Sativa")
+        label(for="sativa100") 100% Sativa
+      li
+        input(type="checkbox" id="indica50" name="classification" value=">50% Indica")
+        label(for="indica50") >50% Indica
+      li
+        input(type="checkbox" id="sativa50" name="classification" value=">50% Sativa")
+        label(for="sativa50") >50% Sativa
+
+    h3 Production Method
+    ul
+      li
+        input(type="checkbox" id="indoor" name="production" value="Indoor")
+        label(for="indoor") Indoor
+      li
+        input(type="checkbox" id="outdoor" name="production" value="Outdoor")
+        label(for="outdoor") Outdoor
+      li
+        input(type="checkbox" id="greenhouse" name="production" value="Greenhouse")
+        label(for="greenhouse") Greenhouse
+
+    h3 Size
+    ul
+      li
+        input(type="checkbox" id="flower" name="size" value="Flower")
+        label(for="flower") Flower
+      li
+        input(type="checkbox" id="preRoll" name="size" value="Pre-Roll Flower")
+        label(for="preRoll") Pre-Roll Flower
+
+    script(src="js/index.js")      
 
         
-      .sort
-          h2 Sort by
-          ul
-            li Date (New first)
-            li Date (Old first)
-            li Price (High first)
-            li Price (Low first)
-            li Total THC (High first)
-            li Total CBD (High first)
-      .main-content
-        // Здесь можно добавить контент, например, продукты
+
+  
+
