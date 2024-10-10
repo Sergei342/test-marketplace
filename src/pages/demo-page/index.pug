@@ -5,6 +5,8 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Marketplace
     link(rel="stylesheet", href="css/index.css")
+    <link href="https://cdn.jsdelivr.net/npm/nouislider@15.5.1/distribute/nouislider.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.5.1/distribute/nouislider.min.js"></script>
     
   body
     .marketplace
@@ -17,24 +19,31 @@ html(lang="en")
           button.active Non Edible
           button.active Concentrate
       .slider-filters
+          
           .slider-container
-           h4 Price Range
-           input(type="range" min="0" max="1000" value="234")
+           
+          
+           
+           
           .slider-container
-            h4 THC %
-            input(type="range" min="0" max="1000" value="234")
-            #thc-slider
+          
+          div#price-slider
+          input#price-value(type="range" min="0" max="1000" value="234")
           .slider-container
-            h4 CBD %
-            input(type="range" min="0" max="1000" value="234")
-            #cbd-slider
+          h4 THC %
+          div#thc-slider
+          input#thc-value(type="range" min="0" max="1000" value="234")
           .slider-container
-            h4 Nose
-            input(type="range" min="0" max="1000" value="234")
-            #nose-slider
+          h4 CBD %
+          div#cbd-slider
+          input#cbd-value(type="range" min="0" max="1000" value="234")
       .slider-container
         h4 Price Range
-        p 1034,5 Results
+        
+        ul.selected-list 
+      
+        
+        
     
     
 
@@ -47,37 +56,37 @@ html(lang="en")
   .filters
     h3 Classification
     ul
-      li
+      li.class-list
         input(type="checkbox" id="indica100" name="classification" value="100% Indica")
         label(for="indica100") 100% Indica
-      li
+      li.list
         input(type="checkbox" id="sativa100" name="classification" value="100% Sativa")
         label(for="sativa100") 100% Sativa
-      li
+      li.class-list
         input(type="checkbox" id="indica50" name="classification" value=">50% Indica")
         label(for="indica50") >50% Indica
-      li
+      li.class-list
         input(type="checkbox" id="sativa50" name="classification" value=">50% Sativa")
         label(for="sativa50") >50% Sativa
 
     h3 Production Method
     ul
-      li
+      li.class-list
         input(type="checkbox" id="indoor" name="production" value="Indoor")
         label(for="indoor") Indoor
-      li
+      li.class-list
         input(type="checkbox" id="outdoor" name="production" value="Outdoor")
         label(for="outdoor") Outdoor
-      li
+      li.class-list
         input(type="checkbox" id="greenhouse" name="production" value="Greenhouse")
         label(for="greenhouse") Greenhouse
 
     h3 Size
     ul
-      li
+      li.class-list
         input(type="checkbox" id="flower" name="size" value="Flower")
         label(for="flower") Flower
-      li
+      li.class-list
         input(type="checkbox" id="preRoll" name="size" value="Pre-Roll Flower")
         label(for="preRoll") Pre-Roll Flower
 
